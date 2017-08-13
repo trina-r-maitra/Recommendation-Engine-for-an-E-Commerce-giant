@@ -41,7 +41,7 @@ class data_preprocessing():
     def drop_items_gst_less_than_n(self, nItems):
     
         dataFiltered = self.data.groupby('item_i').filter(lambda x: len(x) > nItems)
-        return dataFiltered
+        self.data = dataFiltered
     
     
     # Split the data into kFolds. Returns a list of PD dataframes.  
