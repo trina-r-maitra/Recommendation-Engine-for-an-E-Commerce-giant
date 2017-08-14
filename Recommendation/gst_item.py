@@ -22,17 +22,20 @@ class gst_item():
         self.item_item_similarity = np.zeros((self.nb_items, self.nb_items))
         self.counts = np.zeros((self.nb_gst, self.nb_items))
         
-        print "Number of Guests", self.nb_gst
+        #print "Number of Guests", self.nb_gst
         
         #self.probabilities = np.zeros(self.nb_gst, self.nb_items)
     
     def gst_item_matrix(self): 
         
+        # Returns a np array that contains user: Item1 Item2 Item3 ... ItemN
         super_gst_item_list = []
         for i in self.gst_lookup_table:
+        
             gst_item_list = []
             gst_item_list.append(i)
             items = self.data_np[np.where(self.data_np[:,2] == i)][:,1]
+            
             for j in range(len(items)):
                 gst_item_list.append(items[j])
             super_gst_item_list.append(gst_item_list)
@@ -43,7 +46,7 @@ class gst_item():
         #counts = np.zeros((self.nb_gst, self.nb_items))
         total = 0.0
         num_zeros = self.nb_gst * self.nb_items
-        print num_zeros
+
         for i, entry in enumerate(self.data_np): 
             
             gst = self.data_np[i][2]
@@ -63,15 +66,11 @@ class gst_item():
             self.counts[gst_id][item_id] = count
             total += count
             num_zeros -= 1
-        print "total", total
-        print "num_zeros", num_zeros
-        #apb
         alpha = num_zeros / total
-        #alpha = 0.5
-        print 'alpha %.2f' % alpha
+        #print 'alpha %.2f' % alpha
         self.counts *= alpha
         t1 = time.time()
-        print 'Finished loading matrix in %f seconds' % (t1 - t0)
+        #print 'Finished loading matrix in %f seconds' % (t1 - t0)
         return self.counts
     
     
