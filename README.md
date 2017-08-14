@@ -32,7 +32,7 @@ Build a Recommendation System providing top 100 product recommendations given a 
       - 81% of the quantity purchased is 1. Hence, for simplicity and for this exercise I have used quantity as an indicator whether an 
         item has been purchased by a guest or not. I consider Logistic Matrix Factorization since the data is about item purchase(binary-1 
         for yes,0 for no) made by guest. This purchase behaviour is observed over time and deemed as implicit feedback. Logistic MF 
-        belongs to the family of latent factor model where we attempt to understand the relationship between users and items using 
+        belongs to the family of latent factor models where we attempt to understand the relationship between users and items using 
         latent/hidden factors. The top 100 personalized item recommendations for each guest is generated according to the purchase 
         probability given by the logistic function. 
       - Baseline Model is the popularity based model where I recommend top 100 most popular items (purchased maximum times) to each user. 
@@ -46,6 +46,12 @@ Build a Recommendation System providing top 100 product recommendations given a 
 
       - For Logistic Matrix Factorization model, using K fold cross validation I choose the L2 regularization parameter and number of 
         latent features based on Average Recall.
+      - Popularity based model has better average recall than the Logistic Matrix Factorization model and hence we choose it for making 
+        recommendations
+
+
+
+
 
 ### Potential Improvements
 
@@ -58,11 +64,16 @@ Build a Recommendation System providing top 100 product recommendations given a 
 4. Group guests based on their purchase behaviour along with demographic/ financial information and build separate  
    recommendation models for them. 
    
+5. Tackle cold start problem.
+   
 ### References
 
 1. https://stanford.edu/~rezab/nips2014workshop/submits/logmat.pdf
 
 2. https://github.com/MrChrisJohnson/implicit-mf
+
+3. http://yifanhu.net/PUB/cf.pdf
+
 
 
 
