@@ -1,3 +1,8 @@
+### Business Problem
+
+Build a Recommendation System providing top 100 product recommendations given a guest id.
+
+
 ### General Comments about the code
 
 The code has been developed using Anaconda build of Python 2. Numpy, Pandas and Matplotlib libraries have been used as necessary. The operator needs to input the guest_id and the program generates the top 100 recommendations. 
@@ -22,11 +27,6 @@ Validation.py - This is a script for evaluating the performance of the models us
 
 Parameterization.py - This is a script that generates the RecallVsRegularization.png plot. From the plot it can be observed that the popularity model is superior in terms of Recall over a wide range of number of features and regularization parameters. 
 
-
-
-### Business Problem
-
-Build a Recommendation System providing top 100 product recommendations given a guest id.
 
 ### Work Flow 
 
