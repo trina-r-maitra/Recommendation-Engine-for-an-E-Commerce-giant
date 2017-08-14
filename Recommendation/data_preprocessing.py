@@ -31,8 +31,7 @@ class data_preprocessing():
         self.data = self.data[self.data.item_i.str.contains('\?')==False]
         self.data = self.data[self.data.gst_i.str.contains('\?')==False]
             
-        print len(self.data)
-        
+              
         
         
 
