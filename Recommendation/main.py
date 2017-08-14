@@ -13,6 +13,7 @@ if __name__ == "__main__":
     # Read data from CSV
     purchases = pd.read_csv('purchases.csv', sep = ',')
     
+    #Changing
     
     
     # Preprocess the data based on exploratory analysis
