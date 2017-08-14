@@ -2,9 +2,11 @@
 
 The code has been developed using Anaconda build of Python 2. Numpy, Pandas and Matplotlib libraries have been used as necessary. The operator needs to input the guest_id and the program generates the top 100 recommendations. 
 
+The ExploratoryAnalysis Jupyter Notebook was developed using Python 3.
+
 From the RegularizationVsRecall.png plot it can be observed that the recommendations based on Popularity is superior to the Logistic Matrix Factorization Model over wide range of number of latent features and regularization parameter. For the Logistic Matrix Factorization Model only, it can be observed that when the number of latent features is set to 1, the model performs the best (higher recall%). With number of latent features set to 1 the model is relatively better at a regularization parameter of 0.045, albeit the variation in the latter is almost flat. 
 
-
+ExploratoryAnalysis Jupyter Notebook - This comprise intitial data cleaning and exploratory analysis of the purchase.csv data.
 
 main.py - This is the main file. Put the Guest_ID and the top 100 recommendations are generated using the logMF and the Popularity models.
 
@@ -19,10 +21,6 @@ data_preprocessing.py - This file contains the methods for cleaning the data bas
 Validation.py - This is a script for evaluating the performance of the models using k-fold cross validation. 
 
 Parameterization.py - This is a script that generates the RecallVsRegularization.png plot. From the plot it can be observed that the popularity model is superior in terms of Recall over a wide range of number of features and regularization parameters. 
-
-
-
-
 
 
 
@@ -76,8 +74,6 @@ Build a Recommendation System providing top 100 product recommendations given a 
         latent features based on Average Recall.
       - Popularity based model has better average recall than the Logistic Matrix Factorization model and hence we choose it for making 
         recommendations
-
-
 
 
 
