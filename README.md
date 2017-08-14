@@ -1,3 +1,31 @@
+### General Comments about the code
+
+The code has been developed using Anaconda build of Python 2. Numpy, Pandas and Matplotlib libraries have been used as necessary. The operator needs to input the guest_id and the program generates the top 100 recommendations. 
+
+From the RegularizationVsRecall.png plot it can be observed that the recommendations based on Popularity is superior to the Logistic Matrix Factorization Model over wide range of number of latent features and regularization parameter. For the Logistic Matrix Factorization Model only, it can be observed that when the number of latent features is set to 1, the model performs the best (higher recall%). With number of latent features set to 1 the model is relatively better at a regularization parameter of 0.045, albeit the variation in the latter is almost flat. 
+
+
+
+main.py - This is the main file. Put the Guest_ID and the top 100 recommendations are generated using the logMF and the Popularity models.
+
+logMFLearning.py - This file contains the Logistic Matrix Factorization class. Most of the code has been inherited from ref. 1
+
+gst_item.py - This file contains the gst_item class with all the methods for processing the data.
+
+evaluate.py - This file contains the evaluate class with the methods for evaluating the models based on precision and recall
+
+data_preprocessing.py - This file contains the methods for cleaning the data based on exploratory analysis, segregating the data for k-fold cross validation, etc. k-Fold cross-validation could have been used using the scikit-learn library as well.
+
+Validation.py - This is a script for evaluating the performance of the models using k-fold cross validation. 
+
+Parameterization.py - This is a script that generates the RecallVsRegularization.png plot. From the plot it can be observed that the popularity model is superior in terms of Recall over a wide range of number of features and regularization parameters. 
+
+
+
+
+
+
+
 ### Business Problem
 
 Build a Recommendation System providing top 100 product recommendations given a guest id.
@@ -74,28 +102,6 @@ Build a Recommendation System providing top 100 product recommendations given a 
 
 3. http://yifanhu.net/PUB/cf.pdf
 
-
-### General Comments about the code
-
-The code has been developed using Anaconda build of Python 2. Numpy, Pandas and Matplotlib libraries have been used as necessary. The operator needs to input the guest_id and the program generates the top 100 recommendations. 
-
-From the RegularizationVsRecall.png plot it can be observed that the recommendations based on Popularity is superior to the Logistic Matrix Factorization Model over wide range of number of latent features and regularization parameter. For the Logistic Matrix Factorization Model only, it can be observed that when the number of latent features is set to 1, the model performs the best (higher recall%). With number of latent features set to 1 the model is relatively better at a regularization parameter of 0.045, albeit the variation in the latter is almost flat. 
-
-
-
-main.py - This is the main file. Put the Guest_ID and the top 100 recommendations are generated using the logMF and the Popularity models.
-
-logMFLearning.py - This file contains the Logistic Matrix Factorization class. Most of the code has been inherited from ref. 1
-
-gst_item.py - This file contains the gst_item class with all the methods for processing the data.
-
-evaluate.py - This file contains the evaluate class with the methods for evaluating the models based on precision and recall
-
-data_preprocessing.py - This file contains the methods for cleaning the data based on exploratory analysis, segregating the data for k-fold cross validation, etc. k-Fold cross-validation could have been used using the scikit-learn library as well.
-
-Validation.py - This is a script for evaluating the performance of the models using k-fold cross validation. 
-
-Parameterization.py - This is a script that generates the RecallVsRegularization.png plot. From the plot it can be observed that the popularity model is superior in terms of Recall over a wide range of number of features and regularization parameters. 
 
 
         
