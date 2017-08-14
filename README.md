@@ -94,7 +94,7 @@ Parameterization.py - This is a script that generates the RecallVsRegularization
 
 1. https://stanford.edu/~rezab/nips2014workshop/submits/logmat.pdf
 
-2. https://github.com/MrChrisJohnson/implicit-mf
+2. https://github.com/MrChrisJohnson/logistic-mf
 
 3. http://yifanhu.net/PUB/cf.pdf
 
