@@ -75,11 +75,3 @@ class data_preprocessing():
             
         return test_data_DFs, train_data_DFs
     
-    
-    
-    def test_train_split(self, fraction):
-        train = self.data.sample(frac=fraction, replace=False)
-        test = self.data.drop(train.index)
-        print len(train), len(test)
-        return train, test
-        

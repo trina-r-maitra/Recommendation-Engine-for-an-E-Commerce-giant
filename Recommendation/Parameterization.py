@@ -1,3 +1,10 @@
+#===============================================================================
+# This is a script to plot the Validation Data
+#===============================================================================
+
+
+
+
 import time
 import numpy as np
 import pandas as pd
@@ -11,13 +18,13 @@ for i, c in enumerate(listFeatures):
     markerslist = ["^","v","s","+"]
     n = str(c)
     data1Feature = purchases = pd.read_csv('ValidationData_'+n+'Features', sep = ',')
-    #dataPrepForPlot = data1Feature[data1Feature.RegParam == 0.017].reset_index(drop = True)
+
     
     
     dataForPlot_1 = data1Feature[['RegParam','recall_M1']]
     dataForPlot_2 = data1Feature[['RegParam','recall_M2']]
     
-    #print dataForPlot_1
+
     X1 = dataForPlot_1['RegParam']
     Y1 = dataForPlot_1['recall_M1']
     Y2 = dataForPlot_2['recall_M2']

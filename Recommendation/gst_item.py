@@ -99,46 +99,6 @@ class gst_item():
         popItemsList[:,1] = popItems
         
         return popItemsList[0:nTopItemsByOccurrence,0]
-     
-    
-    #Uncomment this code to work with Item-Item similarity
-    
-    #===========================================================================
-    # def item_item_collaborative_filtering(self):
-    #     simvalue = 0.
-    #     denom = 1.0
-    #     simvalue = 0.0
-    #     t0 = time.time()
-    #     print self.nb_items
-    #     for item_index_i in range(self.nb_items):
-    #         for item_index_j in range(item_index_i, self.nb_items):
-    #             
-    #             item_vec_1 = np.array(self.counts[:, item_index_i])
-    #             item_vec_2 = np.array(self.counts[:, item_index_j])
-    #             
-    #             dotProd = np.dot(item_vec_1, item_vec_2.T)
-    #             #print dotProd
-    #             denom = np.linalg.norm(item_vec_1, ord=2) * np.linalg.norm(item_vec_2, ord=2)
-    #             #print denom
-    #             
-    #             simvalue = dotProd / denom
-    #             #print simvalue
-    #             self.item_item_similarity[item_index_i][item_index_j] = simvalue
-    #             self.item_item_similarity[item_index_j][item_index_i] = simvalue
-    #             #===============================================================
-    #             # if (item_index_j % 1000 ==0):
-    #             #     print item_index_j
-    #             #===============================================================
-    #         
-    #         if (item_index_i % 1000 ==0):
-    #             print item_index_i
-    #     
-    #     t1 = time.time()        
-    #     df = pd.DataFrame(self.item_item_similarity)
-    #     df.to_csv("Item-Item.csv")
-    #     print "time: ", t1 - t0
-    #===========================================================================
-                
                 
     def get_top_n_recommendations_for_user(self, guest_id):
         

@@ -66,7 +66,7 @@ if __name__ == "__main__":
     reg_param = 0.045
     niter = 3
     gamma = 1
-    nrec = 20
+    nrec = 100
     
     
     # Logistic Matrix Factorization Model
@@ -82,7 +82,8 @@ if __name__ == "__main__":
         print "Items based on Logistic Matrix Factorization for Guest ",guest_id,"\n"
         print top_n_recommendations_for_Guest
         
-        
+    
+    # Popularity Model    
     print "Most Popular Items \n"
     print gst_item_Model.get_top_n_popular_items(nrec)
     

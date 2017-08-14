@@ -50,7 +50,6 @@ class LogisticMF():
             self.item_biases += bias_step_size * item_bias_deriv
             t1 = time.time()
 
-            #print 'iteration %i finished in %f seconds' % (i + 1, t1 - t0)
 
     def deriv(self, gst):
         if gst:

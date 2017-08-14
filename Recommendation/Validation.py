@@ -126,7 +126,7 @@ for reg_param in np.arange(0.0, 0.1, 0.005):
     ValidationData.append(ValidationData_List)
     ValidationDF = pd.DataFrame(ValidationData, columns = ['RegParam', 'precision_M1', 'recall_M1', 'precision_M2', 'recall_M2'])
     ValidationDF.to_csv('ValidationData_Test', ',')
-    print ValidationDF
+
      
 
 
